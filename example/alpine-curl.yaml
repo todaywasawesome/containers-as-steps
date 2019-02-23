@@ -15,4 +15,4 @@ steps:
     title: Run the image we just built
     image: ${{BuildingDockerImage}}
     environment:
-    - URL: codefresh.io
+    - URL=codefresh.io
