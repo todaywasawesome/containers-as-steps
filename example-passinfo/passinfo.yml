@@ -3,16 +3,20 @@ steps:
   BuildingDockerImage:
     title: Building Docker Image
     type: build
-    image_name: ${{CF_OWNER}}/${{CF_REPO}}
+    image_name: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
     working_directory: ./
     tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
     dockerfile:
       content: |-
         FROM alpine
         RUN apk add --no-cache curl
-        CMD curl $URL
+        CMD echo "Someinfo ${{CF_REVISION}}" >> ${{CF_VOLUME_PATH}}/share.txt
   RunIt:
     title: Run the image we just built
     image: ${{BuildingDockerImage}}
-    environment:
-    - URL=ismycomputeron.com
+  Readout:
+    title: Run the image we just built
+    image: alpine
+    commands:
+    - echo ************ Reading the Output Variables ************"
+    - cat ${{CF_VOLUME_PATH}}/share.txt
