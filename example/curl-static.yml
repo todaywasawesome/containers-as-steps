@@ -1,0 +1,18 @@
+version: '1.0'
+steps:
+  BuildingDockerImage:
+    title: Building Docker Image
+    type: build
+    image_name: todaywasawesome/hello-world
+    working_directory: ./
+    tag: latest
+    dockerfile:
+      content: |-
+        FROM alpine
+        RUN apk add --no-cache curl
+        ENTRYPOINT curl $URL
+  RunIt:
+    title: Run the image we just built
+    image: ${{BuildingDockerImage}}
+    environment:
+    - URL: codefresh.io
