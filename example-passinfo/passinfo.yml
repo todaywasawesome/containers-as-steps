@@ -15,8 +15,8 @@ steps:
     title: Run the image we just built
     image: ${{BuildingDockerImage}}
   Readout:
-    title: Run the image we just built
+    title: Read out the variables
     image: alpine
     commands:
-    - echo ************ Reading the Output Variables ************"
+    - echo "************ Reading the Output Variables ************"
     - cat ${{CF_VOLUME_PATH}}/share.txt
