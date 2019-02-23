@@ -1,4 +1,4 @@
-# containers-as-steps
+# Containers as Steps Workshop
 A workshop to guide you through the creation of containers as steps in a CI/CD pipeline.
 
 ## Introduction
