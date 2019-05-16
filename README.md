@@ -3,6 +3,8 @@ Container-based pipelines have quickly become the standard for of creating scala
 
 No matter where you implement your container-based pipeline the basic unit will be containers. In this short workshop, we'll take you through the creation of purpose built Docker images designed to be used in pipelines. This primer is quick and easy and should only take a few minutes. Only basic knowledge of Docker is required. 
 
+[[https://github.com/todaywasawesome/containers-as-steps/blob/master/Docker-cicd-pipelines.jpg|alt=CI/CD]]
+
 ## Introduction
 CI/CD pipelines are easier to make, maintain, and use when every step is it's own image. Creating custom steps that can be reused over and over is incredibly easy. Checkout https://steps.codefresh.io/ for examples of images that have been built into CI/CD steps. 
 
@@ -13,7 +15,7 @@ CI/CD pipelines are easier to make, maintain, and use when every step is it's ow
 - A free [Codefresh](https://codefresh.io/) account
 
 ### Create and Run An Image That Knows How To Curl
-If you'd like to see this in a pipeline skip to the next step.
+If you'd like to see this in a pipeline, skip to the next step.
 
 On your machine, create a new folder called `example` and Create a file called `Dockerfile`. Add this code to it.
 
@@ -29,7 +31,7 @@ This will build a Docker image that accepts an environmental variable for `URL`.
 
 This should return a simple webpage letting you know that in fact, yes, your computer is on. 
 
-You've now created a single purpose Docker image! To build your just make sure the image has all the components installed you need and you leave a `CMD` at the end that accepts whatever variables you're looking for. 
+You've now created a single purpose Docker image! To build your image, just make sure it has all the components installed you need and you leave a `CMD` at the end that accepts whatever variables you're looking for. 
 
 ### Create and Run an Image in a Pipeline
 1. Create your Codefresh account by going to https://codefresh.io/. 
