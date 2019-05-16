@@ -1,5 +1,7 @@
 # Containers as Steps Workshop
-A workshop to guide you through the creation of containers as steps in a CI/CD pipeline.
+Container-based pipelines have quickly become the standard for of creating scalable continuous integration and delivery pipelines. Container-based pipelines solve numerous problems caused by the traditional VM based pipelines. Issues like version and library conflicts are gone thanks to isolation. Caching can be greatly improved thanks to a shared volume model. And the biggest advantage: developers have much more power and choice when creating their pipelines. They can pick the tools and versions they need without having to open a ticket. This is the core of self serve operations. 
+
+No matter where you implement your container-based pipeline the basic unit will be containers. In this short workshop, we'll take you through the creation of purpose built Docker images designed to be used in pipelines. This primer is quick and easy and should only take a few minutes. Only basic knowledge of Docker is required. 
 
 ## Introduction
 CI/CD pipelines are easier to make, maintain, and use when every step is it's own image. Creating custom steps that can be reused over and over is incredibly easy. Checkout https://steps.codefresh.io/ for examples of images that have been built into CI/CD steps. 
@@ -52,4 +54,4 @@ This example uses three steps.
 ## Why Use a Container for Every Step?
 Tl;dr It's efficent, easy, repeatable. 
 
-For a longer answer, check out this webinar explaining the practice.  https://codefresh.io/events/docker-based-pipelines-devops-com/
+For a longer answer, check out this webinar explaining the practice. https://codefresh.io/events/docker-based-pipelines-devops-com/
