@@ -3,7 +3,8 @@ Container-based pipelines have quickly become the standard for of creating scala
 
 No matter where you implement your container-based pipeline the basic unit will be containers. In this short workshop, we'll take you through the creation of purpose built Docker images designed to be used in pipelines. This primer is quick and easy and should only take a few minutes. Only basic knowledge of Docker is required. 
 
-[[https://github.com/todaywasawesome/containers-as-steps/blob/master/Docker-cicd-pipelines.jpg|alt=CI/CD]]
+![alt CI/CD](https://github.com/todaywasawesome/containers-as-steps/blob/master/Docker-cicd-pipelines.jpg)
+
 
 ## Introduction
 CI/CD pipelines are easier to make, maintain, and use when every step is it's own image. Creating custom steps that can be reused over and over is incredibly easy. Checkout https://steps.codefresh.io/ for examples of images that have been built into CI/CD steps. 
