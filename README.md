@@ -60,7 +60,8 @@ steps:
     image: ${{BuildingDockerImage}}
     environment:
     - URL=ismycomputeron.com
-    ```
+
+```
 This will build an image defined inside the Codefresh yaml and then run it demonstrating curl. 
 
 ### Passing Information and Dependencies to Later Steps
