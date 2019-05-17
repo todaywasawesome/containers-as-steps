@@ -100,7 +100,7 @@ steps:
     - cat ${{CF_VOLUME_PATH}}/share.txt
 ```
 
-For a bonus, delete the first two steps from your pipeline and run it again. The output from step 3 will be the same. Why? Because this shared volume is persistent in Codefresh. This means pipelines have a default cache built right in.
+For a bonus, delete the first two steps from your pipeline and run it again. The output from step 3 will be the same. Why? Because this shared volume is persistent in Codefresh. This means pipelines have a default [pipeline cache](https://codefresh.io/containers/caching-build-dependencies-codefresh-volumes/) built right in.	
 
 ## Why Use a Container for Every Step?
 Tl;dr It's efficent, easy, repeatable. 
